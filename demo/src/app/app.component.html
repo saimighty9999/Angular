@@ -1,0 +1,38 @@
+<app-parent></app-parent>
+<p *ngIf="flag">technoelevate</p>
+<button (click)="Toggle()">change</button>
+ <table>
+     <tr *ngFor="let user of users">
+         <td>{{user.name}}</td>
+         <td>{{user.age}}</td>
+     </tr>
+ </table>
+ <ul *ngFor="let user of users">
+     <li>{{user.name}} {{user.age}}</li>
+ </ul>
+
+
+ <ul *ngFor="let players of players">
+     <li>{{players.name}} {{players.age}}</li>
+ </ul>
+
+
+
+ <div [ngSwitch]="selectedCountry">
+    <div *ngSwitchCase="'ind'">
+     <h3>India has been selected</h3>
+     </div>
+     <div *ngSwitchCase="'usa'">
+        <h3>United states of america been selected</h3>
+        </div>
+        <div *ngSwitchCase="'jap'">
+            <h3>japan+ been selected</h3>
+            </div>
+            <div *ngSwitchCase="'uk'">
+                <h3>United kingdom has been selected</h3>
+                </div>
+                <div *ngSwitchDefault>
+               <h3> no country has been selected</h3>
+                </div>
+                          
+ </div>
